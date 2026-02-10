@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# 🌍 GeoHeal: Soil Restoration & Agricultural Recovery AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**GeoHeal** adalah asisten cerdas berbasis AI yang dirancang untuk membantu pemulihan sektor pertanian pasca-bencana. Aplikasi ini menggunakan teknologi *Computer Vision* untuk mengidentifikasi jenis tanah dan memberikan rekomendasi teknis rehabilitasi lahan secara instan.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 Problem Statement
+Pasca bencana alam, proses penilaian kondisi tanah sering kali terhambat akibat rusaknya ekosistem dan terbatasnya tenaga ahli di lapangan. Hal ini menyebabkan petani kesulitan menentukan langkah pemulihan yang tepat. Tanpa informasi akurat, risiko kegagalan tanam meningkat, menghambat rehabilitasi ekonomi dan mengancam ketahanan pangan lokal.
 
-### `npm start`
+## 🚀 Deskripsi Produk
+HomeCheck adalah aplikasi berbasis web yang berfungsi sebagai asisten cerdas untuk inspeksi visual struktur tanah. Menggunakan arsitektur **MobileNet**, aplikasi ini mampu mengklasifikasikan 8 jenis kategori tanah secara otomatis berdasarkan foto yang diunggah pengguna untuk mendukung keputusan pemulihan lahan.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Fitur Utama
+* **Klasifikasi 8 Jenis Tanah**: Deteksi akurat untuk Aluvial, Andosol, Entisol, Humus, Inceptisol, Laterit, Kapur, dan Pasir.
+* **Rekomendasi Pemulihan Detail**: Panduan langkah demi langkah yang mudah dipahami oleh masyarakat awam.
+* **Database Riwayat**: Menyimpan log laporan kondisi tanah beserta lokasi untuk pemetaan area terdampak.
+* **Aksesibilitas Tinggi**: Ringan (*low-latency*) dan dapat diakses melalui browser ponsel di area dengan sinyal terbatas.
 
-### `npm test`
+## 💻 Teknologi yang Digunakan
+* **Language**: Python
+* **Framework**: TensorFlow, Keras, Gradio
+* **Model**: MobileNetV2 (Convolutional Neural Network)
+* **Deployment**: Docker, Hugging Face Spaces
+* **Dataset**: Dataset Jenis Tanah (Kaggle)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📖 Cara Penggunaan
+1. **Akses Aplikasi**: Buka tautan prototipe [GeoHeal di Hugging Face](https://huggingface.co/spaces/Ferdinann/GeoHeal).
+2. **Unggah Gambar**: Ambil foto sampel tanah langsung di lokasi atau unggah dari galeri.
+3. **Analisis**: Tunggu beberapa detik hingga sistem menampilkan jenis tanah dan probabilitasnya.
+4. **Tindakan**: Ikuti langkah **Langkah Pemulihan** yang muncul (seperti pengapuran, pemberian mulsa, atau normalisasi irigasi).
+5. **Laporkan**: Klik **"Laporkan Kondisi"** untuk menyimpan data ke database riwayat.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📈 Data Understanding
+Dataset yang digunakan mencakup 8 kategori tanah yang masing-masing memiliki karakteristik visual unik:
+* **Aluvial**: Endapan sungai yang subur.
+* **Andosol**: Tanah vulkanik hitam kaya nutrisi.
+* **Humus**: Tanah organik dari pembusukan vegetasi.
+* **Lainnya**: Entisol, Inceptisol, Laterit, Kapur, dan Pasir.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔮 Rencana Pengembangan
+* **Integrasi GPS Otomatis**: Menambahkan koordinat lokasi secara otomatis pada setiap laporan.
+* **Deteksi Unsur Hara**: Mengembangkan model untuk mendeteksi estimasi kadar pH secara visual.
+* **Versi Mobile Native**: Konversi ke aplikasi Android APK untuk penggunaan offline.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 👥 Tim Pengembang
+* **Ferdinan** - *Developer & AI Engineer*
+* Linkedin: [Ferdinanta Ginting](https://www.linkedin.com/in/ferdinanta)
+* Prototipe: [Hugging Face Space](https://huggingface.co/spaces/Ferdinann/GeoHeal)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+© 2026 GeoHeal Project - Solusi Teknologi untuk Ketahanan Pangan Pasca Bencana.
