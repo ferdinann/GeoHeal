@@ -103,16 +103,29 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#0F171A] text-slate-200 font-sans antialiased">
-      {/* Glossy Header */}
+      {/* Glossy Header - Responsive Updated */}
       <nav className="sticky top-0 z-50 bg-[#0F171A]/80 backdrop-blur-md border-b border-white/5 px-6 py-5">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-5">
           <div className="flex items-center gap-3">
             <div className="bg-emerald-500 p-2 rounded-lg shadow-[0_0_15px_rgba(16,185,129,0.4)]">🌍</div>
-            <h1 className="text-xl font-black tracking-tighter text-white uppercase">GeoHeal<span className="text-emerald-500">AI</span></h1>
+            <h1 className="text-xl font-black tracking-tighter text-white uppercase">
+              GeoHeal<span className="text-emerald-500">AI</span>
+            </h1>
           </div>
-          <div className="flex bg-white/5 p-1 rounded-xl border border-white/10">
-            <button onClick={() => setActiveTab("analisis")} className={`px-6 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all ${activeTab === "analisis" ? "bg-emerald-500 text-white shadow-lg" : "text-slate-500"}`}>Analisis</button>
-            <button onClick={() => setActiveTab("riwayat")} className={`px-6 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all ${activeTab === "riwayat" ? "bg-white shadow-md text-emerald-800" : "text-slate-500"}`}>Riwayat</button>
+          
+          <div className="flex bg-white/5 p-1 rounded-xl border border-white/10 w-full sm:w-auto">
+            <button 
+              onClick={() => setActiveTab("analisis")} 
+              className={`flex-1 sm:flex-none px-6 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all ${activeTab === "analisis" ? "bg-emerald-500 text-white shadow-lg" : "text-slate-500"}`}
+            >
+              Analisis
+            </button>
+            <button 
+              onClick={() => setActiveTab("riwayat")} 
+              className={`flex-1 sm:flex-none px-6 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all ${activeTab === "riwayat" ? "bg-white shadow-md text-emerald-800" : "text-slate-500"}`}
+            >
+              Riwayat
+            </button>
           </div>
         </div>
       </nav>
@@ -170,7 +183,7 @@ function App() {
               </div>
             </section>
 
-            {/* Sisi Kanan: Output (Sesuai Logic Python) */}
+            {/* Sisi Kanan: Output */}
             <section className="lg:col-span-7 flex flex-col h-full">
               {loading ? (
                 <div className="flex flex-col items-center justify-center h-full min-h-[400px] bg-[#1A2428] rounded-[3rem] border border-white/5">
@@ -182,7 +195,7 @@ function App() {
                   <div className="bg-gradient-to-br from-emerald-600 to-teal-800 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden">
                     <div className="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
                     <span className="text-[10px] font-black uppercase tracking-[0.5em] text-emerald-200/80 mb-4 block">Hasil Prediksi Tanah</span>
-                    <h2 className="text-6xl font-black tracking-tighter uppercase leading-none mb-4">
+                    <h2 className="text-4xl sm:text-6xl font-black tracking-tighter uppercase leading-none mb-4">
                       {prediction[0].label}
                     </h2>
                     <div className="inline-flex items-center gap-2 bg-black/20 px-4 py-2 rounded-full border border-white/10">
@@ -228,7 +241,7 @@ function App() {
                 <tbody className="divide-y divide-white/5">
                   {history.length > 0 ? history.map((item) => (
                     <tr key={item.id} className="hover:bg-white/5 transition-colors group">
-                      <td className="px-10 py-7 font-bold text-slate-400 text-sm">{item.waktu}</td>
+                      <td className="px-10 py-7 font-bold text-slate-400 text-sm whitespace-nowrap">{item.waktu}</td>
                       <td className="px-10 py-7">
                         <span className="px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 text-[9px] font-black uppercase tracking-widest border border-emerald-500/20">
                           {item.status}
